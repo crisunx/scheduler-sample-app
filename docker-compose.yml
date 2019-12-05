@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+  routines:
+    build: .
+    image: crisun/routines
+    container_name: routines
+    environment:
+      - TZ=America/Sao_Paulo
+    volumes:
+      - /tmp:/app/data
+    ports:
+      - "8080:8080"
